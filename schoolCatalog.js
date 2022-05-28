@@ -17,17 +17,34 @@ class School {
     get numberOfStudents() {
       return this._numberOfStudents;
     }
+
+    quickFacts() {
+        console.log(`${this._name} educates ${this._numberOfStudents} students at the ${this._level} school level.`);
+      }
+
+static pickSubstituteTeacher(substituteTeachers) {
+        let myIndex = Math.floor(substituteTeachers.length * Math.random());
+        return substituteTeachers[myIndex];
+      }
+
+    set numberOfStudents(newNumberOfStudents) {
+        if (typeof newNumberOfStudents === 'number') {
+          this._numberOfStudents = newNumberOfStudents;
+        } else {
+          console.log('Invalid input: numberOfStudents must be set to a Number value type.')
+        }
+      }
   
   }
   
-  class Primary extends School() {
+  class PrimarySchool extends School {
   
   }
   
-  class Middle extends School() {
+  class MiddleSchool extends School {
   
   }
   
-  class High extends School() {
+  class HighSchool extends School {
     
   }
