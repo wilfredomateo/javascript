@@ -17,7 +17,7 @@ const encodeMessage = (str) => {
 
 const decodeMessage = (str) => {
   // Use the encryptor functions here.
-  
+    return caesarCipher(symbolCipher(reverseCipher(str)), -6);
 }
 
 // User input / output.
@@ -37,5 +37,5 @@ const handleInput = (userInput) => {
 }
 
 // Run the program.
-process.stdout.write('Enter the message you would like to encrypt...\n> ');
+process.stdout.write('Enter the message you would like to encode/decode...\n> ');
 process.stdin.on('data', handleInput);
