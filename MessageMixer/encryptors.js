@@ -1,4 +1,5 @@
 //Encryption Functions. Functions can be imported for use by other programs.
+//Author: Wilfredo Mateo
 
 //Ceasar Cipher
 const caesarCipher = (str, amount = 0) => {
